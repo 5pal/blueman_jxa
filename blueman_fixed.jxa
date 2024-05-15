@@ -263,6 +263,7 @@ class ToggleConnectionCommand extends WorkflowBase {
         let _waitForConnection = () => {
             for (let i=0; i < 3; i++) {
                 if (ObjC.unwrap(device.instance.isConnected)) {
+                    // this code was device.isConnected so I changed it to as you see! device.instance.isConnected! As a result, It's work perfectly!!
                     return true
                 }
                 delay(0.5)
